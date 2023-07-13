@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Botão</title>
+    </head>
+
+    <body>
+
+        <select onchange="ConverterTonelada(this.value)">
+            <option value="Opção Selecionada: Litros">Litros</option>
+            <option value="Opção selecionada: Quilogramas">Quilogramas</option>
+            <option value="Tonelada">Tonelada</option>
+        </select>
+
+        <input type="text" placeholder="Informe seu nome" id="nome">
+        <input type="text" placeholder="Informe seu sobrenome" id="sobrenome">
+        <button onclick="minhaFuncao()">Quero ver</button>
+        <p><input type="text" placeholder="Informe número 1" id="numero1"> +
+        <input type="text" placeholder="Informe número 2" id="numero2">
+        <button onclick="Soma()">Somar</button></p>
+
+        <div id="resultadosoma"></div>
+
+        <p><input type="text" placeholder="Informe número 1" id="numero1s"> -
+        <input type="text" placeholder="Informe número 2" id="numero2s">
+        <button onclick="Subtracao()">Subtrair</button></p>
+
+        <div id="resultadosubtracao"></div>
+
+        <p><input type="text" placeholder="Informe o valor em tonrladas" id="toneladas"></p>
+        <button onclick="ConverterTonelada()">Converter</button></p>
+
+        <script>
+            function minhaFuncao(){
+                var nome = document.querySelector('#nome').value;
+                var sobrenome = document.querySelector('#sobrenome').value;
+                //alert("Nome: "+ nome +" - Sobrenome: " + sobrenome);
+                alert(`Nome: ${nome} - Sobrenome: ${sobrenome}`);
+            }
+            function Soma(){
+                var numero1 = parseInt(document.querySelector('#numero1').value);
+                var numero2 = parseInt(document.querySelector('#numero2').value);
+                var resultado = numero1 + numero2;
+                document.querySelector('#resultadosoma').innerHTML = resultado;
+                alert(resultado);
+            }
+            function minhaUnidade(valor){
+                alert(valor);
+            }
+            function Subtracao(){
+                var numero1 = parseInt(document.querySelector('#numero1s').value);
+                var numero2 = parseInt(document.querySelector('#numero2s').value);
+                var resultado = numero1 - numero2;
+                document.querySelector('#resultadosubtracao').innerHTML = resultado;
+            }
+            function ConverterTonelada(valor){
+                if(valor=="Tonelada") {
+                    var valorgramas = parseInt(document.querySelector('#gramas').value);
+                    var resultado = 1000000 * toneladas
+                    document.querySelector("Valor convertido em gramas: " + '#resultadosubtracao').innerHTML = resultado;
+                }
+            }
+    
+        </script>
+    </body>
+</html>
